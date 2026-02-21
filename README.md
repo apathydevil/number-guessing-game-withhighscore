@@ -18,5 +18,5 @@ python main.py
 ```
 
 ## What I learned
-This was my 2 ever Project. I learned CSV file I/O, the random module, sorting with lambda functions and building a local leaderboard system
+This was my second Project. I learned CSV file I/O, the random module, sorting with lambda functions and building a local leaderboard system
 
