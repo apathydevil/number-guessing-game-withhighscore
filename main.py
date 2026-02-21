@@ -81,8 +81,12 @@ def main():
                     print(f"Name: {score['name']}, Difficulty: {difficulty_names[score['difficulty']]}, Guesses: {score['guesses']}")
             case "clear":
                 if os.path.exists("scores.csv"):
-                    os.remove("scores.csv")
-                    print("All highscores cleared!")
+                    confirm = input("Are you sure you want to clear all highscores? This action cannot be undone! yes/no? ").strip().lower()
+                    if confirm == "yes":
+                        os.remove("scores.csv")
+                        print("All highscores cleared!")
+                    else:
+                        print("Highscore clearing cancelled!")
                 else:
                     print("No highscores to clear!")
                 print()
