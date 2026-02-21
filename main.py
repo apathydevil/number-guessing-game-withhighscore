@@ -55,7 +55,7 @@ def main():
     print("Welcome to my simple number guessing game with a highscore leaderboard!")
     print("Your goal is to try and guess my secret number!")
     while True:
-        print("Would you like to start, see highscores or quit? start/highscores/quit: ")
+        print("Would you like to start, see highscores, clear all highscores or quit? start/highscores/clear/quit: ")
         choice = input().strip().lower()
         match choice:
             case "start":
@@ -79,6 +79,13 @@ def main():
                 sorted_scores = sorted(scores, key=lambda x: (int(x["difficulty"]), int(x["guesses"])))
                 for score in sorted_scores:
                     print(f"Name: {score['name']}, Difficulty: {difficulty_names[score['difficulty']]}, Guesses: {score['guesses']}")
+            case "clear":
+                if os.path.exists("scores.csv"):
+                    os.remove("scores.csv")
+                    print("All highscores cleared!")
+                else:
+                    print("No highscores to clear!")
+                print()
             case "quit":
                 print("Thank you for playing!")
                 break

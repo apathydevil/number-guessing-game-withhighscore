@@ -4,11 +4,12 @@ A simple command-line number guessing game with a highscore leaderboard stored i
 
 ## Features
 
-| Command    | Description          |
-|------------|----------------------|
-| start      | Start a new game     |
-| highscores | View the leaderboard |
-| quit       | Exit the game        |
+| Command    | Description           |
+|------------|-----------------------|
+| start      | Start a new game      |
+| highscores | View the leaderboard  |
+| clear      | Clear the leaderboard |
+| quit       | Exit the game         |
 
 ## How to run
 ```
